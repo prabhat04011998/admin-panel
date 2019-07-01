@@ -1,6 +1,4 @@
 <?php 
-include("config.php");
-   session_start();
    
    $user_check = $_SESSION['login_user'];
    if(!isset($_SESSION['login_user'])){
@@ -119,20 +117,41 @@ include("config.php");
                             </li>
 
                            
-                            
                             <li>
-                                <a href="#"><i class="fa fa-wrench fa-fw"></i>ADD<span class="fa arrow"></span></a>
+                                <a href="#"><i class="fa fa-wrench fa-fw"></i>Sub-Category<span class="fa arrow"></span></a>
                                 <ul class="nav nav-second-level">
                                     <li>
-                                        <a href="subcategory.php">SUBCATEGORY</a>
+                                        <a href="showsubcategory.php">View</a>
                                     </li>
                                     <li>
-                                        <a href="product.php">PRODUCT</a>
+                                        <a href="subcategory.php">Create</a>
                                     </li>
-                                    <li>
-                                        <a href="design.php">DESIGN</a>
-                                    </li>
+                                    
                                         
+                                </ul>
+                                <!-- /.nav-second-level -->
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-wrench fa-fw"></i>Design<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                                    <li>
+                                        <a href="showdesign.php">View</a>
+                                    </li>
+                                    <li>
+                                        <a href="design.php">Create</a>
+                                    </li>        
+                                </ul>
+                                <!-- /.nav-second-level -->
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-wrench fa-fw"></i>Product<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                                    <li>
+                                        <a href="products.php">View</a>
+                                    </li>
+                                    <li>
+                                        <a href="product.php">Create</a>
+                                    </li>        
                                 </ul>
                                 <!-- /.nav-second-level -->
                             </li>

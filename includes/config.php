@@ -1,4 +1,6 @@
 <?php
+ob_start();
+session_start();
 // getting req. variables for connection string from env vars
 $localhost = 'localhost';
 $DBNAME = 'shri';

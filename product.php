@@ -1,6 +1,6 @@
 <?php 
  include("includes/config.php");
-   session_start();
+
    $subcategoryquery="SELECT * FROM sub_category" ;
    $subcategoryquery=mysqli_query($db,$subcategoryquery);
 
@@ -13,32 +13,35 @@
     $date = date('Y-m-d').rand(1,10000000); 
     $extensions = array("jpeg","jpg","png");  
 
-      $image1           = $date.$_FILES['img1']['name'];
+      $image1           = $date.'-'.$_FILES['img1']['name'];
       $image_old_path1        = $_FILES['img1']['tmp_name'];
       $image_new_path1        ='uploads/' . $image1; 
       if($image1!==""){
         move_uploaded_file($image_old_path1, $image_new_path1);
       }else{
         echo("File not selected");
+        $image1="";
       }
   
 
-      $image2           = $date.$_FILES['img2']['name'];
+      $image2           = $date.'-'.$_FILES['img2']['name'];
       $image_old_path2        = $_FILES['img2']['tmp_name'];
       $image_new_path2        ='uploads/' . $image2;
       if($image2!==""){
       move_uploaded_file($image_old_path2, $image_new_path2);
       }else{
         echo("File not Selected");
+        $image2="";
       }
 
-      $image3           = $date.$_FILES['img3']['name'];
+      $image3           = $date.'-'.$_FILES['img3']['name'];
       $image_old_path3        = $_FILES['img3']['tmp_name'];
       $image_new_path3        ='uploads/' . $image3;
       if($image3!==""){
       move_uploaded_file($image_old_path3, $image_new_path3); 
       }else{
         echo("File not Seleccted");
+        $image3="";
     }
     $productName=$_POST['productName'];
     $netWt=$_POST['netWt'];
@@ -57,7 +60,7 @@
     };
     $breadth=$_POST['breadth'];
     if($breadth==''){
-        $Breadth==0;
+        $breadth==0;
     };
     $design_id=$_POST['design'];
     if($categ=='gold'){
@@ -71,8 +74,10 @@
 
     $insertquery="INSERT INTO Products( category_id, sub_category_id, design_id, name, net_weight,fine_weight, image1, image2, image3, purity, price, tags, stock, description, caption, length, breadth) VALUES ('$category_id','$subcategory','$design_id','$productName','$netWt','$fineWt','$image1','$image2','$image3','$purity','$price','$tags','$stock','$description','$caption','$length','$breadth')";
 
-     echo($insertquery);
-      if(!$insertquery){
+      if($insertquery){
+        mysqli_query($db,$insertquery);
+        
+      }else{
         die(mysqli_error($db));
       }
       echo("successfully Saved");
@@ -130,9 +135,9 @@
                     <div class="row">
                         <div class="col-md-6">
                       
-                      <label>Product Name  :</label><br/><input type = "text" name = "productName" class = "box" /><br/><br />
+                      <label>Product Name  :</label><br/><input type = "text" name = "productName" required class = "box" /><br/><br />
 
-                      <label>Net Weight  :</label><br/><input type = "text" name = "netWt" class = "box" value="0" /><br/><br />
+                      <label>Net Weight  :</label><br/><input type = "text" name = "netWt" required class = "box" value="0" /><br/><br />
 
                       <label>Fine Weight  :</label><br/><input type = "text" name = "fineWt" class = "box" value="0" /><br/><br />
 
@@ -164,7 +169,7 @@
                         </div> 
                         <div class="col-md-6">
 
-                    <label>Purity :</label><br/><input type="text" name="purity"/><br/><br/>
+                    <label>Purity :</label><br/><input type="text" name="purity" required /><br/><br/>
 
                     <label>Price :</label><br/><input type="number" name="price" value="0" /><br/><br/>
 

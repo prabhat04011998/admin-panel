@@ -7,8 +7,8 @@
       
       $categ=$_POST['categ'];
       $name = mysqli_real_escape_string($db,$_POST['name']);
-      echo($name);
-      echo($categ);
+      $tabindex=$_POST['tabindex'];
+
       if($categ=='gold'){
         $category_id=1;
       }else{
@@ -17,7 +17,7 @@
       
      
   
-      $query=mysqli_query($db,"INSERT INTO sub_category (category_id, name) VALUES ('$category_id','$name')");
+      $query=mysqli_query($db,"INSERT INTO sub_category (category_id, name,tabindex) VALUES ('$category_id','$name','$tabindex')");
 
       if(!$query){
         die(mysqli_error($db));
@@ -79,6 +79,7 @@
                <form action = "subcategory.php" method = "post">
                   
                   <label>Name  :</label><input type = "text" name = "name" class = "box" required="" /><br/><br />
+                  <label>TabIndex  :</label><input type = "number" name = "tabindex" class = "box" required /><br/><br />
                   
                   <label>Category :</label><br>
                     <select name="categ">

@@ -1,6 +1,6 @@
 <?php
    include("includes/config.php");
-   session_start();
+
    
    if(isset($_POST["submit"])) {
       // username and password sent from form 
@@ -63,10 +63,12 @@
                   <label>Password  :</label><input type = "password" name = "password" class = "box" /><br/><br />
                   <input type = "submit" name="submit" value = " Submit "/><br />
                </form>
-               
+               <?php if(isset($error)){?>
                <div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
+            <?php } ?>
                     
             </div>
+               
                 
          </div>
             
