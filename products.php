@@ -27,6 +27,9 @@ $result = mysqli_query($db,"SELECT * FROM Products");
 
         <!-- Custom Fonts -->
         <link href="./css/font-awesome.min.css" rel="stylesheet" type="text/css">
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -44,7 +47,7 @@ $result = mysqli_query($db,"SELECT * FROM Products");
 	<div class="col-md-9"> 
 		<div class="table-responsive" style="margin-top:30px;">
 	<?php
-$answer="<table class='table' >
+$answer="<table class='table table-bordered table-hover table-responsive table-dark' >
 <thead>
 <tr>
 <th>Id</th>

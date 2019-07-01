@@ -43,7 +43,7 @@ $result = mysqli_query($db,"SELECT * FROM design");
 	<div class="col-md-8"> 
 		<div class="table-responsive" style="margin-top:30px;">
 	<?php
-$answer= "<table class='table' >
+$answer= "<table class='table table-bordered table-dark table-hover' >
 <thead>
 <tr>
 <th>Id</th>

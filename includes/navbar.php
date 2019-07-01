@@ -28,60 +28,6 @@
                 </ul>
 
                 <ul class="nav navbar-right navbar-top-links">
-                    <li class="dropdown navbar-inverse">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                            <i class="fa fa-bell fa-fw"></i> <b class="caret"></b>
-                        </a>
-                        <ul class="dropdown-menu dropdown-alerts">
-                            <li>
-                                <a href="#">
-                                    <div>
-                                        <i class="fa fa-comment fa-fw"></i> New Comment
-                                        <span class="pull-right text-muted small">4 minutes ago</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <div>
-                                        <i class="fa fa-twitter fa-fw"></i> 3 New Followers
-                                        <span class="pull-right text-muted small">12 minutes ago</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <div>
-                                        <i class="fa fa-envelope fa-fw"></i> Message Sent
-                                        <span class="pull-right text-muted small">4 minutes ago</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <div>
-                                        <i class="fa fa-tasks fa-fw"></i> New Task
-                                        <span class="pull-right text-muted small">4 minutes ago</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <div>
-                                        <i class="fa fa-upload fa-fw"></i> Server Rebooted
-                                        <span class="pull-right text-muted small">4 minutes ago</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="divider"></li>
-                            <li>
-                                <a class="text-center" href="#">
-                                    <strong>See All Alerts</strong>
-                                    <i class="fa fa-angle-right"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                             <i class="fa fa-user fa-fw"></i> <?php echo($user_check )?><b class="caret"></b>
@@ -108,72 +54,71 @@
                                         <button class="btn btn-primary" type="button">
                                             <i class="fa fa-search"></i>
                                         </button>
-                                </span>
+                                    </span>
                                 </div>
                                 <!-- /input-group -->
                             </li>
                             <li>
                                 <a href="index.php" class="active"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                             </li>
-
-                           
-                            <li>
-                                <a href="#"><i class="fa fa-wrench fa-fw"></i>Sub-Category<span class="fa arrow"></span></a>
-                                <ul class="nav nav-second-level">
-                                    <li>
-                                        <a href="showsubcategory.php">View</a>
-                                    </li>
-                                    <li>
-                                        <a href="subcategory.php">Create</a>
-                                    </li>
-                                    
-                                        
-                                </ul>
-                                <!-- /.nav-second-level -->
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-wrench fa-fw"></i>Design<span class="fa arrow"></span></a>
-                                <ul class="nav nav-second-level">
-                                    <li>
-                                        <a href="showdesign.php">View</a>
-                                    </li>
-                                    <li>
-                                        <a href="design.php">Create</a>
-                                    </li>        
-                                </ul>
-                                <!-- /.nav-second-level -->
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-wrench fa-fw"></i>Product<span class="fa arrow"></span></a>
-                                <ul class="nav nav-second-level">
-                                    <li>
-                                        <a href="products.php">View</a>
-                                    </li>
-                                    <li>
-                                        <a href="product.php">Create</a>
-                                    </li>        
-                                </ul>
-                                <!-- /.nav-second-level -->
-                            </li>
+                            <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <i class="fa fa-cart-plus fa-fw"></i>Sub-Category<b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu dropdown-user">
+                                <li><a href="subcategory.php"><i class="fa fa-plus fa-fw"></i>Create</a>
+                                </li>
+                                
+                                <li class="divider"></li>
+                                <li><a href="showsubcategory.php"><i class="fa fa-eye fa-fw"></i>View</a>
+                                </li>
+                            </ul>
+                        </li>
+                            <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <i class="fa fa-cart-plus fa-fw"></i>Design<b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu dropdown-user">
+                                <li><a href="design.php"><i class="fa fa-plus fa-fw"></i>Create</a>
+                                </li>
+                                
+                                <li class="divider"></li>
+                                <li><a href="showdesign.php"><i class="fa fa-eye fa-fw"></i>View</a>
+                                </li>
+                            </ul>
+                        </li>
+                            <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <i class="fa fa-product-hunt fa-fw"></i>Products<b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu dropdown-user">
+                                <li><a href="product.php"><i class="fa fa-plus fa-fw"></i>Create</a>
+                                </li>
+                                
+                                <li class="divider"></li>
+                                <li><a href="products.php"><i class="fa fa-eye fa-fw"></i>View</a>
+                                </li>
+                            </ul>
+                        </li>
 
                         </ul>
                     </div>
                 </div>
             </nav>
-        <script src="../js/jquery.min.js"></script>
+        <script type="text/javascript" src="../js/jquery.min.js"></script>
 
         <!-- Bootstrap Core JavaScript -->
-        <script src="../js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="../js/bootstrap.min.js"></script>
 
         <!-- Metis Menu Plugin JavaScript -->
-        <script src="../js/metisMenu.min.js"></script>
+        <script type="text/javascript" src="../js/metisMenu.min.js"></script>
 
         <!-- Morris Charts JavaScript -->
-        <script src="../js/raphael.min.js"></script>
-        <script src="../js/morris.min.js"></script>
-        <script src="../js/morris-data.js"></script>
+        <script type="text/javascript" src="../js/raphael.min.js"></script>
+        <script type="text/javascript" src="../js/morris.min.js"></script>
+        <script type="text/javascript" src="../js/morris-data.js"></script>
 
         <!-- Custom Theme JavaScript -->
-        <script src="../js/startmin.js"></script>
+        <script type="text/javascript" src="../js/startmin.js"></script>
 
     </body>

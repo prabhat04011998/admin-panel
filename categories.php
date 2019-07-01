@@ -33,7 +33,7 @@ include('includes/config.php');
     
     <div class="col-md-4"></div>
     <div class="col-md-8">
-  <table class="table table-dark table-hover">
+  <table class="table table-bordered table-dark table-hover">
     <thead style="background-color: #454d55">
       <tr >
         <th>ID</th>
